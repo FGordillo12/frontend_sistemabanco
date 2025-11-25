@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Login from "./login.jsx";
+import Login from "./Loginss.jsx";  
 import Dashboard from "./dashboard.jsx";
 import Registro from "./Registro.jsx";
 import PaginaPrincipal from "./PaginaPrincipal.jsx";
