@@ -34,7 +34,8 @@ function App() {
     try {
       setCargandoSaldo(true);
       const response = await axios.get(
-        `http://localhost:3000/api/transacciones/saldo/${userId}`
+        `https://sistema-bancario-tzxk.onrender.com/api/transacciones/saldo/${userId}`
+
       );
       setSaldoGlobal(response.data.saldo);
     } catch (error) {
