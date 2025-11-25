@@ -1,0 +1,83 @@
+/* Contenedor general */
+.contenedor-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+/* Caja de fondo blanca */
+.caja-fondo {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 400px;
+  max-width: 90%;
+}
+
+/* Títulos */
+.caja-fondo h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Formulario */
+.formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario label {
+  margin: 10px 0 5px 0;
+  font-weight: bold;
+  color: #555;
+}
+
+.formulario input,
+.formulario select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.formulario button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.formulario button:hover {
+  background-color: #1666c1;
+}
+
+/* Mensajes */
+.formulario p {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+}
+
+/* Lista de productos */
+.formulario ul {
+  margin-top: 15px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.formulario li {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.95em;
+  color: #333;
+}

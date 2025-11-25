@@ -1,0 +1,50 @@
+/*Diseño de login y registro*/
+
+.formulario {
+    background-color: none;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: none;
+  max-width: 400px;
+  margin: auto;
+
+}
+
+.formulario input {
+    width: 100%;
+    padding: 10px;
+    background: #F2F2F2;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 20px;
+    border: none;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.formulario hover input {
+    border-color: #777;
+}
+
+.formulario input:focus {
+    border: 2px solid black;
+    background: white;
+}
+
+.formulario button {
+    width: 100%;
+    padding: 10px;
+    background: #db8f6c;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.formulario button:hover {
+    background: #45a049;
+}

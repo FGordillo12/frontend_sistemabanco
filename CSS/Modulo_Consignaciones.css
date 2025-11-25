@@ -1,0 +1,214 @@
+.consignaciones-container {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.consignaciones-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.volver-button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.volver-button:hover {
+  background-color: #5a6268;
+}
+
+.consignaciones-title {
+  color: #333;
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.consignaciones-form-container {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  margin-bottom: 25px;
+}
+
+.consignaciones-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+  font-family: Arial, sans-serif;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.cancelar-button {
+  flex: 1;
+  padding: 14px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cancelar-button:hover {
+  background-color: #5a6268;
+}
+
+.consignaciones-button {
+  flex: 2;
+  padding: 14px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.consignaciones-button:hover {
+  background-color: #218838;
+}
+
+.consignaciones-info {
+  margin-top: 25px;
+  padding: 20px;
+  background-color: #e9f7ef;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+}
+
+.info-title {
+  color: #155724;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.info-list {
+  color: #155724;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.info-list li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .consignaciones-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+  
+  .consignaciones-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .consignaciones-form-container {
+    padding: 20px 15px;
+  }
+  
+  .form-buttons {
+    flex-direction: column;
+  }
+  
+  .consignaciones-title {
+    font-size: 24px;
+  }
+}
+/* Estilos para el saldo actual */
+.saldo-actual {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 180px;
+}
+
+.saldo-label {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 5px;
+}
+
+.saldo-monto {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Ajustar el header para el saldo */
+.recargar-saldo-header,
+.retiros-header,
+.consignaciones-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0;
+  flex-wrap: wrap;
+  gap: 15px;
+}

@@ -1,0 +1,302 @@
+.estado-cuenta-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.estado-cuenta-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.volver-button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.volver-button:hover {
+  background-color: #5a6268;
+}
+
+.estado-cuenta-title {
+  color: #333;
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Información de la Cuenta */
+.info-cuenta {
+  margin-bottom: 25px;
+  padding: 25px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px;
+  color: white;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-label {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 5px;
+}
+
+.info-value {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.info-saldo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4ade80;
+}
+
+/* Filtros */
+.filtros-container {
+  margin-bottom: 25px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.filtros-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 18px;
+}
+
+.filtros-form {
+  display: flex;
+  gap: 15px;
+  align-items: end;
+  flex-wrap: wrap;
+}
+
+.filtro-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 150px;
+}
+
+.filtro-label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+}
+
+.filtro-input {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.filtro-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.filtro-button:hover {
+  background-color: #0056b3;
+}
+
+/* Movimientos */
+.movimientos-container {
+  margin-bottom: 25px;
+}
+
+.movimientos-title {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 20px;
+}
+
+.movimientos-table-container {
+  overflow-x: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+}
+
+.movimientos-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.movimientos-table th {
+  background-color: #f8f9fa;
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.movimientos-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.movimientos-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.movimientos-table tr.ingreso {
+  background-color: #f0fff4;
+}
+
+.movimientos-table tr.egreso {
+  background-color: #fff5f5;
+}
+
+.monto.ingreso {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.monto.egreso {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.saldo {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Resumen */
+.resumen-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.resumen-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 18px;
+  text-align: center;
+}
+
+.resumen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.resumen-item {
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.resumen-item.ingresos {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+.resumen-item.egresos {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+.resumen-item.saldo-final {
+  background-color: #cce7ff;
+  border: 1px solid #b3d9ff;
+}
+
+.resumen-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.resumen-monto {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.resumen-monto.positivo {
+  color: #28a745;
+}
+
+.resumen-monto.negativo {
+  color: #dc3545;
+}
+
+.resumen-monto.final {
+  color: #007bff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .estado-cuenta-container {
+    padding: 15px;
+  }
+  
+  .estado-cuenta-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .filtros-form {
+    flex-direction: column;
+  }
+  
+  .filtro-group {
+    min-width: 100%;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .resumen-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .movimientos-table {
+    font-size: 14px;
+  }
+  
+  .movimientos-table th,
+  .movimientos-table td {
+    padding: 8px;
+  }
+}
