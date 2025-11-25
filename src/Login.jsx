@@ -11,13 +11,15 @@ const Login = ({ onLogin }) => {
 
   const navigate = useNavigate();
 
+  const API_URL = "https://sistema-bancario-tzxk.onrender.com";
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!requires2FA) {
       // Login email + password
       try {
-        const respuesta = await fetch("http://localhost:3000/apis/login", {
+        const respuesta = await fetch(`${API_URL}/apis/login`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email: Correo, password: Contraseña }),
@@ -28,7 +30,6 @@ const Login = ({ onLogin }) => {
         if (respuesta.ok && data.requires2FA) {
           setRequires2FA(true);
           setMensaje("Se envió un código a tu correo");
-          // Guardar el user temporalmente para usarlo después
           if (data.user) {
             setUserTemp(data.user);
           }
@@ -48,7 +49,7 @@ const Login = ({ onLogin }) => {
     } else {
       // Verificar código 2FA
       try {
-        const respuesta = await fetch("http://localhost:3000/api/verify-2fa", {
+        const respuesta = await fetch(`${API_URL}/api/verify-2fa`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email: Correo, token: Codigo.trim() }),
@@ -62,15 +63,14 @@ const Login = ({ onLogin }) => {
         }
 
         setMensaje("Login completo!");
-        
-        // Usar el user del backend O el temporal
-        const usuarioCompleto = data.user || userTemp || { 
-          correo: Correo, 
-          _id: userTemp?._id 
+
+        const usuarioCompleto = data.user || userTemp || {
+          correo: Correo,
+          _id: userTemp?._id,
         };
-        
+
         onLogin(usuarioCompleto);
-        
+
         if (data.rol === "admin") {
           navigate("/dashboard");
         } else if (data.rol === "cliente") {
